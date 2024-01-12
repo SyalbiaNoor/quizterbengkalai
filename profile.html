@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title> Dashboard </title>
+
+        <style>
+            @import url('https://fonts.cdnfonts.com/css/passeio-test');
+            body, html { 
+                height: 100%; 
+                margin: 0; 
+                background-color: #E9DCCF;
+            }
+            .square {
+                height: 804px;
+                width: 720px;
+                flex-shrink: 0;
+                background: #FFEFE5;
+                border-radius: 15px;
+                position: relative;
+                left: 200px;
+                top: 13px;
+                bottom: 13px;
+            }
+            .square2 {
+                height: 697px;
+                width: 520px;
+                flex-shrink: 0;
+                background: #FFEFE5;
+                border-radius: 15px;
+                position: absolute;
+                right: 15px;
+                top: 120px;
+            }
+            .p1 {
+                position: absolute;
+                top: 15px;
+                right: 1057px;
+            }
+            .p2 {
+                color: #4A4A4A;
+                text-align: center;
+                font-family: 'Passo Test', sans-serif;
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 500;
+                position: absolute;
+                top: 157px;
+                left: 157px
+            }
+            .p3 {
+                position: absolute;
+                top: 220px;
+                left: 157px;
+            }
+            .p4 {
+                color: #665148;
+                text-align: center;
+                font-family: 'Passo Test', sans-serif;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                position: absolute;
+                top: 265px;
+                left: 47px
+            }
+            .p5 {
+                color: #903729;
+                text-align: center;
+                font-family: 'Passo Test', sans-serif;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                position: absolute;
+                top: 340px;
+                left: 65px
+            }
+            .p6 {
+                color: #665148;
+                text-align: center;
+                font-family: 'Passo Test', sans-serif;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                position: absolute;
+                top: 407px;
+                left: 67px
+            }
+            .p7 {
+                color: #665148;
+                text-align: center;
+                font-family: 'Passo Test', sans-serif;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                position: absolute;
+                top: 479px;
+                left: 70px
+            }
+            .p8 {
+                position: absolute;
+                top: 45px;
+                right: 44px;
+            }
+            .p9 {
+                font-family: 'Passo Test', sans-serif;
+                color: #4A4A4A;
+                font-size: 22px;
+                font-weight: 600;
+                position: absolute;
+                top: 45px;
+                right: 170px;
+            }
+            .p10 {
+                font-family: 'Passo Test', sans-serif;
+                color: #B5775D;
+                font-size: 19px;
+                font-weight: 400;
+                position: absolute;
+                top: 74px;
+                right: 219px;
+            }
+            .p11 {
+                color: #636768;
+                text-align: left;
+                font-family: 'Passo Test', sans-serif;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;                
+            }
+            .p12 {
+                color: #4A4A4A;
+                text-align: left;
+                font-family: 'Passo Test', sans-serif;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400; 
+            }
+            .p13 {
+                position: absolute;
+                top: 213px;
+                left: 470px;
+            }
+            .icon1 {
+                position: absolute;
+                top: 159px;
+                left: 111px 
+            }
+            /*.icon2 {
+                position: absolute;
+                top: 236px;
+                left: 173px;
+            }*/
+            .icon3 {
+                position: absolute;
+                left: 24px;
+                bottom: 5px;
+            }
+            .icon4 {
+                position: absolute;
+                top: 11px;
+                left: 24px;
+            }
+            .signout {
+                position: absolute;
+                left: 30px;
+                top: 730px;
+            }
+            .edit {
+                position: absolute;
+                top: 533px;
+                left: 445px;
+            }
+            .button1 {
+                width: 140px;
+                height: 34px;
+                flex-shrink: 0;
+                padding: 0px 50px;
+                background-color: rgba(174, 35, 13, 0.05);
+                border: 1.5px solid #903729;
+                border-radius: 10px;
+                font-family: 'Passo Test', sans-serif;
+                color: #903729;
+                font-size: 16px;
+                font-weight: 450;
+                transition-property: normal;
+                transition-duration: 250ms;
+                transition-timing-function: linear;
+                transition-delay: 0s;
+                transition-property: all;
+                cursor: pointer;
+            }
+            .button2 {
+                width: 210px;
+                height: 47px;
+                flex-shrink: 0;
+                padding: 0px 60px;
+                background-color: rgba(174, 35, 13, 0.05);
+                border: 1px solid #636768;
+                border-radius: 10px;
+                font-family: 'Passo Test', sans-serif;
+                color: #4A4A4A;
+                font-size: 15px;
+                font-weight: 400;
+                letter-spacing: 1px;
+                transition-property: normal;
+                transition-duration: 250ms;
+                transition-timing-function: linear;
+                transition-delay: 0s;
+                transition-property: all;
+                cursor: pointer;
+            }
+            .button1:hover, .button1:active {background-color: rgba(180, 97, 49, 0.274);}
+            .button2:hover, .button2:active {background-color: rgba(180, 97, 49, 0.274);}
+        </style>
+    </head>
+
+    <body>
+        <div class="p1"><img src="pics/justlogo.png" width="213px" height='83px'></div>
+        <a href="home.html">    
+            <div class="p4"><img src="pics/Home.svg" width="30%"><br><b> DASHBOARD </b></div>
+        </a>
+        <a href="#">
+            <div class="p5"><img src="pics/Profile1.svg" width="37%"><br><b> PROFILE </b></div>
+        </a>
+        <a href="#">
+            <div class="p6"><img src="pics/Forum.svg" width="42%"><br><b> FORUM </b></div>
+        </a>
+        <a href="#">
+            <div class="p7"><img src="pics/Notes.svg" width="47%"><br><b> NOTES </b></div>
+        </a>       
+        <div class="signout">
+            <div class="icon3">
+                <img src="pics/logout.png" width="83%">
+            </div>
+            <a href="index.html"><button class="button1">Sign_Out</button></a>
+        </div>
+
+        <div class="square2"> </div> 
+        <div class="square">
+            <div class="icon1"><img src="pics/Profiling.svg" width="85%"></div>
+            <div class="p2"> Profile </div>
+            <div class="p3"><img src="pics/emptyprofile.png" width="85%"></div>
+            <!--<div class="icon2"><img src="pics/camera.svg" width="85%"></div>-->
+            <div class="p13">
+                <div class="p11"> Username: </div>
+                <div class="p12"> aing_udin_maung </div>
+                <pre> </pre>
+                <div class="p11"> Name: </div>
+                <div class="p12"> Udin Maung Ganteng </div>
+                <pre> </pre>
+                <div class="p11"> Email: </div>
+                <div class="p12"> udinmaung123@gmail.com </div>
+                <pre> </pre>
+                <div class="p11"> Status: </div>
+                <div class="p12"> Student </div>
+            </div>
+            <div class="edit">
+                <div class="icon4">
+                    <img src="pics/Pen.svg" width="90%">
+                </div>
+                <a href="#"><button class="button2">EDIT_PROFILE</button></a>
+            </div>
+        </div>
+        <pre> </pre>
+
+        <div class="p8"><img src="pics/profilepic.svg" width="90%"></div>
+        <div class="p9"> Username </div>
+        <div class="p10"> Status </div>
+    </body>
+</html>

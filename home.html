@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title> Dashboard </title>
+
+        <style>
+            @import url('https://fonts.cdnfonts.com/css/passeio-test');
+            body, html { 
+                height: 100%; 
+                margin: 0; 
+                background-color: #E9DCCF;
+            }
+            .square {
+                height: 805px;
+                width: 720px;
+                flex-shrink: 0;
+                background: #FFEFE5;
+                border-radius: 15px;
+                position: relative;
+                left: 200px;
+                top: 5px;
+            }
+            .square2 {
+                height: 70px;
+                width: 304px;
+                flex-shrink: 0;
+                background: rgba(244, 237, 231, 0.70);
+                border-radius: 10px;
+            }
+            .subject1 {
+                width: 590px;
+                height: 113px;
+                position: absolute;
+                left: 65px;
+                top: 176px;
+                background-color: #EDD0B2;
+                border-radius: 25px;
+                border: 0px;
+                transition-property: normal;
+                transition-duration: 250ms;
+                transition-timing-function: linear;
+                transition-delay: 0s;
+                transition-property: all;
+                cursor: pointer;
+            }
+            .subject2 {
+                width: 590px;
+                height: 113px;
+                position: absolute;
+                left: 65px;
+                top: 300px;
+                background-color: #CECCB6;
+                border-radius: 25px;
+                border: 0px;
+                transition-property: normal;
+                transition-duration: 250ms;
+                transition-timing-function: linear;
+                transition-delay: 0s;
+                transition-property: all;
+                cursor: pointer;
+            }
+            .subject3 {
+                width: 590px;
+                height: 113px;
+                position: absolute;
+                left: 65px;
+                top: 424px;
+                background-color: #A0C3C6;
+                border-radius: 25px;
+                border: 0px;
+                transition-property: normal;
+                transition-duration: 250ms;
+                transition-timing-function: linear;
+                transition-delay: 0s;
+                transition-property: all;
+                cursor: pointer;
+            }
+            .subject4 {
+                width: 590px;
+                height: 113px;
+                position: absolute;
+                left: 65px;
+                top: 548px;
+                background-color: #B0C9D8;
+                border-radius: 25px;
+                border: 0px;
+                transition-property: normal;
+                transition-duration: 250ms;
+                transition-timing-function: linear;
+                transition-delay: 0s;
+                transition-property: all;
+                cursor: pointer;
+            }
+            .subject5 {
+                width: 590px;
+                height: 113px;
+                position: absolute;
+                left: 65px;
+                top: 672px;
+                background-color: #E1A298;
+                border-radius: 25px;
+                border: 0px;
+                transition-property: normal;
+                transition-duration: 250ms;
+                transition-timing-function: linear;
+                transition-delay: 0s;
+                transition-property: all;
+                cursor: pointer;
+            }
+            .p1 {
+                position: absolute;
+                top: 15px;
+                right: 1057px;
+            }
+            .p2 {
+                color: #7D8384;
+                text-align: center;
+                font-family: 'Passo Test', sans-serif;
+                font-size: 17px;
+                font-style: normal;
+                font-weight: 600;
+                position: absolute;
+                left: 70px;
+                top: 75px;
+            }
+            .p3 {
+                color: #4A4A4A;
+                text-align: center;
+                font-family: 'Passo Test', sans-serif;
+                font-size: 25px;
+                font-style: normal;
+                font-weight: 600;
+                position: absolute;
+                left: 70px;
+                top: 40px;
+                letter-spacing: 1px;
+            }
+            .p4 {
+                color: #903729;
+                text-align: center;
+                font-family: 'Passo Test', sans-serif;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                position: absolute;
+                top: 265px;
+                left: 47px
+            }
+            .p5 {
+                color: #665148;
+                text-align: center;
+                font-family: 'Passo Test', sans-serif;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                position: absolute;
+                top: 340px;
+                left: 65px
+            }
+            .p6 {
+                color: #665148;
+                text-align: center;
+                font-family: 'Passo Test', sans-serif;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                position: absolute;
+                top: 407px;
+                left: 67px
+            }
+            .p7 {
+                color: #665148;
+                text-align: center;
+                font-family: 'Passo Test', sans-serif;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                position: absolute;
+                top: 479px;
+                left: 70px
+            }
+            .p8 {
+                position: absolute;
+                top: 45px;
+                right: 44px;
+            }
+            .p9 {
+                font-family: 'Passo Test', sans-serif;
+                color: #4A4A4A;
+                font-size: 22px;
+                font-weight: 600;
+                position: absolute;
+                top: 45px;
+                right: 170px;
+            }
+            .p10 {
+                font-family: 'Passo Test', sans-serif;
+                color: #B5775D;
+                font-size: 19px;
+                font-weight: 400;
+                position: absolute;
+                top: 74px;
+                right: 219px;
+            }
+            .p11 {
+                font-family: 'Passo Test', sans-serif;
+                font-size: 17px;
+                color: #4A4A4A;
+                font-weight: 500;
+                position: absolute;
+                bottom: 114px;
+                right: 249px;
+            }
+            .p12 {
+                position: absolute;
+                right: 18px;
+                top: 470px;
+            }
+            .icon1 {
+                position: absolute;
+                top: 5px;
+                left: 21px
+            }
+            .icon2 {
+                position: absolute;
+                right: 68px;
+                top: 53px;
+            }
+            .icon3 {
+                position: absolute;
+                left: 24px;
+                bottom: 5px;
+            }
+            .icon4 {
+                position: absolute;
+                left: 50px;
+                top: 13px;
+            }
+            .icon5 {
+                position: absolute;
+                right: 60px;
+                top: 17px;
+            }
+            .icon6 {
+                position: absolute;
+                right: 30px;
+                top: 17px;
+            }
+            .pic {
+                position: absolute;
+                right: 50px;
+            }
+            .searchbox {
+                position: absolute;
+                left: 65px;
+                top: 130px;
+            }
+            .signout {
+                position: absolute;
+                left: 30px;
+                top: 730px;
+            }
+            .calendarbox {
+                height: 275px;
+                width: 307px;
+                flex-shrink: 0;
+                background: #FFEFE5;
+                border-radius: 15px;
+                position: absolute;
+                right: 17px;
+                top: 140px;
+            }
+            h1 {
+                color: #4A4A4A;
+                text-align: center;
+                font-family: 'Passo Test', sans-serif;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 600;
+                position: absolute;
+                left: 68px;
+                top: 15px;   
+            }
+            table {
+                color: #4A4A4A;
+                text-align: center;
+                font-family: 'Passo Test', sans-serif;
+                position: absolute;
+                top: 10px;
+                right: 1px;
+            }
+            td {
+                padding: 8px 8px;
+            }
+            .td1 {
+                padding: 8px 8px;
+                font-size: 14px;
+                color: #4a4a4ac9;
+                font-weight: 260;
+            }
+            tr {
+                font-size: 14px;
+                color: #4A4A4A;
+                font-weight: 300;
+            }
+            .tr1 {
+                font-size: 17px;
+                color: #4A4A4A;
+                font-weight: 500;
+            }
+            .tr2 {
+                font-size: 15px;
+                color: #4A4A4A;
+                font-weight: 300;
+            }
+            input[type=search] {
+                width: 590px;
+                height: 27px;
+                flex-shrink: 0;
+                padding: 0px 45px;
+                background-color: rgb(255, 255, 255);
+                border-radius: 20px;
+                border: 0px;
+                color: #7D8384;
+                font-family: 'Passo Test', sans-serif;
+                font-weight: 600;
+            }
+            input[type=button] {
+                width: 140px;
+                height: 34px;
+                flex-shrink: 0;
+                padding: 0px 50px;
+                background-color: rgba(174, 35, 13, 0.05);
+                border: 1px solid #903729;
+                border-radius: 10px;
+                font-family: 'Passo Test', sans-serif;
+                color: #903729;
+                font-size: 15px;
+                font-weight: 400;
+                transition-property: normal;
+                transition-duration: 250ms;
+                transition-timing-function: linear;
+                transition-delay: 0s;
+                transition-property: all;
+                cursor: pointer;
+            }
+            .subject1:hover, .subject1:focus {background-color: rgb(223, 189, 154);}
+            .subject2:hover, .subject2:focus {background-color: #bdba9b;}
+            .subject3:hover, .subject3:focus {background-color: #86b0b4;}
+            .subject4:hover, .subject4:focus {background-color: #95b2c4;}
+            .subject5:hover, .subject5:focus {background-color: #cc8a80;}
+            input[type=button]:hover, input[type=button]:active {background-color: rgba(180, 97, 49, 0.274);}
+        </style>
+    </head>
+
+    <body>
+        <div class="p1"><img src="pics/justlogo.png" width="213px" height='83px'></div>
+        <a href="#">    
+            <div class="p4"><img src="pics/Home1.svg" width="30%"><br><b> DASHBOARD </b></div>
+        </a>
+        <a href="profile.html">
+            <div class="p5"><img src="pics/Profile.svg" width="37%"><br><b> PROFILE </b></div>
+        </a>
+        <a href="#">
+            <div class="p6"><img src="pics/Forum.svg" width="42%"><br><b> FORUM </b></div>
+        </a>
+        <a href="#">
+            <div class="p7"><img src="pics/Notes.svg" width="47%"><br><b> NOTES </b></div>
+        </a>       
+        <div class="signout">
+            <div class="icon3">
+                <img src="pics/logout.png" width="83%">
+            </div>
+            <a href="index.html"><input type="button" value="Sign Out"></a>
+        </div>
+
+        <div class="square">
+            <h1> Hey [Username], </h1>
+            <div class="p2"> Let's review your courses! </div>
+            <div class="icon2">
+                <a href="#"><img src="pics/PluseRegtangle.svg" width="80%"></a>
+            </div>
+            <div class="searchbox">
+                <div class="icon1">
+                    <img src="pics/Magnifier.svg" width="83%">
+                </div>
+                <form action="/action_page.php">
+                    <input type="search" id="search" name="search" placeholder= "Search..">
+                </form>
+            </div>
+            <a href="#">
+                <div class="subject1">
+                    <div class="p3"> Chemistry </div>
+                    <div class="pic"><img src="pics/atom.png" width="85%"></div>
+                </div>
+            </a>
+            <div class="subject2">
+                <div class="p3"> Biology </div>
+                <div class="pic"><img src="pics/microscope.png" width="85%"></div>
+            </div>
+            <div class="subject3">
+                <div class="p3"> Programming </div>
+                <div class="pic"><img src="pics/laptop.png" width="85%"></div>
+            </div>
+            <div class="subject4">
+                <div class="p3"> English </div>
+                <div class="pic"><img src="pics/letter.png" width="85%"></div>
+            </div>
+            <div class="subject5">
+                <div class="p3"> Geography </div>
+                <div class="pic"><img src="pics/globe.png" width="85%"></div>
+            </div>
+            <pre> </pre>
+        </div>
+        <pre> </pre>
+
+        <div class="p8"><img src="pics/profilepic.svg" width="90%"></div>
+        <div class="p9"> Username </div>
+        <div class="p10"> Status </div>
+        <div class="calendarbox">
+            <table>
+                <tr class="tr1">
+                    <div class="icon4"><img src="pics/Calendar.svg" width="75%"></div>
+                    <td colspan="7"> October 2023 </td>
+                    <div class="icon5"><img src="pics/Arrow-Left.svg" width="85%"></div>
+                    <div class="icon6"><img src="pics/arrow-right.svg" width="85%"></div>
+                </tr>
+                <tr class="tr2">
+                    <td> Sun </td>
+                    <td> Mon </td>
+                    <td> Tue </td>
+                    <td> Wed </td>
+                    <td> Thu </td>
+                    <td> Fri </td>
+                    <td> Sat </td>
+                </tr>          
+                <tr>
+                    <td> 1 </td>
+                    <td> 2 </td>
+                    <td> 3 </td>
+                    <td> 4 </td>
+                    <td> 5 </td>
+                    <td> 6 </td>
+                    <td> 7 </td>
+                </tr>          
+                <tr>
+                    <td> 8 </td>
+                    <td> 9 </td>
+                    <td> 10 </td>
+                    <td> 11 </td>
+                    <td> 12 </td>
+                    <td> 13 </td>
+                    <td> 14 </td>
+                </tr>         
+                <tr>
+                    <td> 15 </td>
+                    <td> 16 </td>
+                    <td> 17 </td>
+                    <td> 18 </td>
+                    <td> 19 </td>
+                    <td> 20 </td>
+                    <td> 21 </td>
+                </tr>          
+                <tr>
+                    <td> 22 </td>
+                    <td> 23 </td>
+                    <td> 24 </td>
+                    <td> 25 </td>
+                    <td> 26 </td>
+                    <td> 27 </td>
+                    <td> 28 </td>
+                </tr>          
+                <tr>
+                    <td> 29 </td>
+                    <td> 30 </td>
+                    <td> 31 </td>
+                    <td class="td1"> 1 </td>
+                    <td class="td1"> 2 </td>
+                    <td class="td1"> 3 </td>
+                    <td class="td1"> 4 </td>
+                </tr>
+            </table>
+        </div>
+        <div class="p11"> Timeline </div>
+        <div class="p12">
+            <div class="square2"></div>
+            <pre><div class="square2"></div></pre>
+            <pre><div class="square2"></div></pre>
+            <pre><div class="square2"></div></pre>
+        </div>
+    </body>
+</html>
